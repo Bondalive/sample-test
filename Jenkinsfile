@@ -16,7 +16,7 @@ bat 'mvn package'
 stage('Deploy') {
 steps {
 echo 'Deploying....'
-bat ‘mvn tomcat7:deploy’
+bat 'mvn tomcat7:deploy'
 }
 }
 }
