@@ -16,7 +16,7 @@ bat 'mvn package'
 stage('Deploy') {
 steps {
 echo 'Deploying....'
-bat 'mvn tomcat7:deploy'
+deploy adapters: [tomcat8(credentialsId: 'tomcat_credentials', path: '', url: 'http://localhost:9999/')], contextPath: null, war: '**/*.war'
 }
 }
 }
