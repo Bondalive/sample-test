@@ -16,8 +16,6 @@ bat 'mvn package'
 stage('Deploy') {
 steps {
 echo 'Deploying....'
-
-Email
   post {
     success {
       emailext body: 'hello', subject: 'Hello', to: 'vish.sira@gmail.com'
